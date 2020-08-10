@@ -79,12 +79,13 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzB-qh-jxs">
-                                <rect key="frame" x="161" y="89" width="53" height="53"/>
+                                <rect key="frame" x="161" y="88.5" width="53" height="53"/>
                                 <state key="normal" image="play"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dzc-O7-qAE" secondAttribute="bottom" id="3rE-3u-nYm"/>
                             <constraint firstItem="Fdd-OM-HTs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DYQ-kE-1QG"/>
                             <constraint firstItem="t6y-b0-BUf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GSz-1M-8SQ"/>
                             <constraint firstItem="8YU-6e-B69" firstAttribute="top" secondItem="Fdd-OM-HTs" secondAttribute="bottom" constant="4" id="JcJ-gL-YYV"/>
