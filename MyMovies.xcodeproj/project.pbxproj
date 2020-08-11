@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEC5F3B424E2738B00905731 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AEC5F3B324E2738B00905731 /* movies.json */; };
+		AEC5F3B824E27E3300905731 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5F3B724E27E3300905731 /* MoviesTableViewController.swift */; };
+		AEC5F3BE24E2925B00905731 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5F3BD24E2925B00905731 /* MovieTableViewCell.swift */; };
+		AEC5F3C024E2A0C900905731 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5F3BF24E2A0C900905731 /* UIViewController+CoreData.swift */; };
 		AEC988AF24E158C0008B2D78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC988AE24E158C0008B2D78 /* AppDelegate.swift */; };
 		AEC988B124E158C0008B2D78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC988B024E158C0008B2D78 /* SceneDelegate.swift */; };
 		AEC988B324E158C0008B2D78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC988B224E158C0008B2D78 /* ViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AEC5F3B324E2738B00905731 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
+		AEC5F3B724E27E3300905731 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		AEC5F3BD24E2925B00905731 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		AEC5F3BF24E2A0C900905731 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		AEC988AB24E158C0008B2D78 /* MyMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC988AE24E158C0008B2D78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEC988B024E158C0008B2D78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +50,7 @@
 		AEC988A224E158C0008B2D78 = {
 			isa = PBXGroup;
 			children = (
+				AEC5F3BF24E2A0C900905731 /* UIViewController+CoreData.swift */,
 				AEC988AD24E158C0008B2D78 /* MyMovies */,
 				AEC988AC24E158C0008B2D78 /* Products */,
 			);
@@ -62,6 +71,9 @@
 				AEC988B024E158C0008B2D78 /* SceneDelegate.swift */,
 				AEC988B224E158C0008B2D78 /* ViewController.swift */,
 				AEC988B424E158C0008B2D78 /* Main.storyboard */,
+				AEC5F3B724E27E3300905731 /* MoviesTableViewController.swift */,
+				AEC5F3BD24E2925B00905731 /* MovieTableViewCell.swift */,
+				AEC5F3B324E2738B00905731 /* movies.json */,
 				AEC988BA24E158C3008B2D78 /* Assets.xcassets */,
 				AEC988BC24E158C3008B2D78 /* LaunchScreen.storyboard */,
 				AEC988BF24E158C3008B2D78 /* Info.plist */,
@@ -130,6 +142,7 @@
 			files = (
 				AEC988BE24E158C3008B2D78 /* LaunchScreen.storyboard in Resources */,
 				AEC988BB24E158C3008B2D78 /* Assets.xcassets in Resources */,
+				AEC5F3B424E2738B00905731 /* movies.json in Resources */,
 				AEC988B624E158C0008B2D78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC5F3B824E27E3300905731 /* MoviesTableViewController.swift in Sources */,
 				AEC988B324E158C0008B2D78 /* ViewController.swift in Sources */,
+				AEC5F3BE24E2925B00905731 /* MovieTableViewCell.swift in Sources */,
 				AEC988AF24E158C0008B2D78 /* AppDelegate.swift in Sources */,
+				AEC5F3C024E2A0C900905731 /* UIViewController+CoreData.swift in Sources */,
 				AEC988B924E158C0008B2D78 /* MyMovies.xcdatamodeld in Sources */,
 				AEC988B124E158C0008B2D78 /* SceneDelegate.swift in Sources */,
 			);
