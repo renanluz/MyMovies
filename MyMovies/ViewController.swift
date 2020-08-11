@@ -23,7 +23,7 @@ class ViewController: UIViewController {
       super.viewDidLoad()
         
         if let movie = movie {
-            ivMovie.image = UIImage(named: movie.image)
+            ivMovie.image = movie.image as? UIImage
             lbTitle.text = movie.title
             lbCategories.text = movie.categories
             lbRating.text = "⭐️ \(movie.rating)/10"
