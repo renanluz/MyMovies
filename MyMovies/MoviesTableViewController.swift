@@ -86,22 +86,26 @@ class MoviesTableViewController: UITableViewController {
         return cell
     }
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit
-          editingStyle: UITableViewCellEditingStyle, forRowAt
-              indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // Se o usuário apertou o botão delete
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with:
-             .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate
-               class, insert it into the array, and add a new
-               row to the table view
+            
+            // Recuperamos o filme daquela célula
+            let movie = fetchedResultsController.object(at: indexPath)
+            
+            // O context possui um método para exclusão de um elemento
+            context.delete(movie)
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
-    */
+    
 }
 
 //Através de extensions, vamos implementar o protocolo NSFetchedResultsControllerDelegate
