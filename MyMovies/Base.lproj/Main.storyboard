@@ -336,6 +336,16 @@
                                 <rect key="frame" x="161" y="176.66666666666666" width="53" height="53"/>
                                 <state key="normal" image="play"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0E-NC-Dz2">
+                                <rect key="frame" x="236" y="375" width="123" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Agendar lembretes">
+                                    <color key="titleColor" red="0.99215686270000003" green="0.80000000000000004" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="scheduleNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7V-8L-pVn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -343,6 +353,7 @@
                             <constraint firstItem="Fdd-OM-HTs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DYQ-kE-1QG"/>
                             <constraint firstItem="t6y-b0-BUf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GSz-1M-8SQ"/>
                             <constraint firstItem="8YU-6e-B69" firstAttribute="top" secondItem="Fdd-OM-HTs" secondAttribute="bottom" constant="4" id="JcJ-gL-YYV"/>
+                            <constraint firstItem="g0E-NC-Dz2" firstAttribute="top" secondItem="Fdd-OM-HTs" secondAttribute="bottom" constant="19.329999999999998" id="Jdd-ZA-8Nx"/>
                             <constraint firstItem="qzB-qh-jxs" firstAttribute="centerY" secondItem="t6y-b0-BUf" secondAttribute="centerY" id="Krt-DQ-42Q"/>
                             <constraint firstItem="Pnd-A8-AtO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lko-1v-th4"/>
                             <constraint firstItem="dzc-O7-qAE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P6m-i9-3CI"/>
@@ -358,6 +369,7 @@
                             <constraint firstItem="dzc-O7-qAE" firstAttribute="top" secondItem="Pnd-A8-AtO" secondAttribute="bottom" constant="12" id="fLd-lu-4Zo"/>
                             <constraint firstItem="qzB-qh-jxs" firstAttribute="centerX" secondItem="t6y-b0-BUf" secondAttribute="centerX" id="fkw-Vs-GAm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fdd-OM-HTs" secondAttribute="trailing" constant="16" id="ga2-Vd-HnV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g0E-NC-Dz2" secondAttribute="trailing" constant="16" id="mzV-no-VVu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
