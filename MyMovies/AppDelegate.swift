@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @available(iOS 13.0, *)
 @UIApplicationMain
@@ -17,6 +18,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Definimos o delegate do UNUserNotificationCenter como sendo esta própria classe.
+        //Com isso, esta classe irá responder pelo UNUserNotificationCenter.
+        UNUserNotificationCenter.current().delegate = self
+        
+        //Primeiro solicitamos que seja fornecido o ajuste atual, ou seja, o que o usuário respondeu quando foi solicitada a permissão.
+        UNUserNotificationCenter.current().getNotificationSettings {(settings) in
+            
+            //Se o status de autorização for notDetermined, significa que o usuário nunca foi pedido para aceitar ou seja, é a primeira vez que o app é aberto.
+            //Nesse caso, iremos solicitar a permissão.
+            if settings.authorizationStatus == .notDetermined {
+                
+                //Primeiro cria-se um arquivo de opções indicando o que nossa notificação irá fazer.
+                //No nosso caso, iremos mostar um alerta da notificação e tocar um som.
+                let options: UNAuthorizationOptions = [.alert, .sound]
+                
+                //Aqui, através do método requstAuthorization, solicitamos a autorização
+                UNUserNotificationCenter.current().requestAuthorization(options: options, completionHandler: {(success, error) in
+                    
+                    // A propriedade success indica se o usuário autorizou ou não.
+                    
+                    if error == nil {
+                        print(success)
+                    } else {
+                        print(error!.localizedDescription)
+                    }
+                })
+                //Caso o usuário tenha negado, sempre imprimimos a mensagem abaixo.
+                } else if settings.authorizationStatus == .denied {
+                    print("Usuário negou a Notificação")
+                }
+        }
         return true
     }
 
@@ -80,5 +113,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+
+@available(iOS 13.0, *)
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    //Método chamado quando a notificação for aparecer com o app aberto
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+    }
+    
+    //Método chamado quando a notificação for aparecer com o app fechado ou em background
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
+    }
 }
 
